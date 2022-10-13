@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="jquery-3.6.1.min.js"></script>
+    <script src="client.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>Client</title>
+  </head>
+
+  <body onload="Client.loadAll()">
+    <form>
+      <h1>Add Clientes</h1>
+      <ul>
+        <li>
+          <label for="id">Id</label>
+          <input id="id" type="number" />
+        </li>
+        <li>
+          <label for="name">Name</label>
+          <input id="name" type="text" />
+        </li>
+        <li>
+          <label for="email">Email</label>
+          <input id="email" type="text" />
+        </li>
+        <li>
+          <label for="age">Age</label>
+          <input id="age" min="1" type="number" />
+        </li>
+        <li>
+          <button onclick="Client.insert()" type="button">Insert</button>
+        <li>
+          <button onclick="Client.insert()" type="button">Insert</button>
+        </li>
+    </form>
+    <div>
+      <h1>Client Table</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="4">No Clients</td>
+          </tr>
+        </tbody>
+      </table>
+      <div id="client-details" class="clientDetails">
+        <form action="" class="form">
+
+        </form>
+      </div>
+
+    </div>
+  </body>
+</html>
