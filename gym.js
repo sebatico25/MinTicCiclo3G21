@@ -43,12 +43,12 @@ class Gym {
         $("tbody").html("");
         for (let index = 0; index < data.items.length; ++index) {
           $("tbody").append(`<tr>
-              <td>${data.items[index].id}</td>
-              <td>
-                <a href="#" onclick="Gym.loadById(${data.items[index].id})">
+              <td class="lalign">
+                <a id="colname" href="#" onclick="Client.loadById(${data.items[index].id})">
                   ${data.items[index].name}
                 </a>
               </td>
+              <td>${data.items[index].id}</td>
               <td>${data.items[index].model}</td>
             </tr>`);
         }

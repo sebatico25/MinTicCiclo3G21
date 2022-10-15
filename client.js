@@ -41,13 +41,14 @@ class Client {
         $("tbody").html("");
         for (let index = 0; index < data.items.length; ++index) {
           $("tbody").append(`<tr>
-              <td>${data.items[index].id}</td>
-              <td>
-                <a href="#" onclick="Client.loadById(${data.items[index].id})">
+              <td class="lalign">
+                <a id="colname" href="#" onclick="Client.loadById(${data.items[index].id})">
                   ${data.items[index].name}
                 </a>
               </td>
+              <td>${data.items[index].id}</td>
               <td>${data.items[index].email}</td>
+              <td>${data.items[index].age}</td>
             </tr>`);
         }
       },

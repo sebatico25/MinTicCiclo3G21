@@ -37,12 +37,12 @@ class Message {
         $("tbody").html("");
         for (let index = 0; index < data.items.length; ++index) {
           $("tbody").append(`<tr>
-              <td>${data.items[index].id}</td>
-              <td>
-                <a href="#" onclick="Message.loadById(${data.items[index].id})">
+              <td class="lalign">
+                <a id="colname" href="#" onclick="Client.loadById(${data.items[index].id})">
                   ${data.items[index].messagetext}
                 </a>
               </td>
+              <td>${data.items[index].id}</td>
             </tr>`);
         }
       },
